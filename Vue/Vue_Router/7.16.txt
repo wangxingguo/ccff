@@ -1,0 +1,15 @@
+时间:2020-07-16
+目标:Vue Router
+
+知识点1: 传参数和接收参数
+              this.$router.push({
+                    name: '/',  // 这个name的值取自于路由中的name属性 如果是path:那么就对应的routes中的path属性
+                                // 所以选择path找path、选择name去对应name
+                    params: {
+                        username: this.login.username,
+                        password: this.login.password
+                    }
+                    // 解析:params和query的差别
+                    // 传参如果是params:{id:id} 接收参数:this.$route.params.id
+                    // 传参如果是query:{id:id} 接收参数:this.$route.query.id
+                })
